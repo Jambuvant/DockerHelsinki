@@ -1,0 +1,11 @@
+Secret message: Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+Commands Used:
+1) Pull docker image & start the container
+> docker run -d --name demo devopsdockeruh/simple-web-service:ubuntu 
+
+2) Enter the container
+> docker exec -it demo bash
+
+3) Execute command to get the secret message
+> tail -f ./text.log
