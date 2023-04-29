@@ -1,0 +1,5 @@
+# build the image
+$ docker build -t ex1thrteen .
+
+# run container with ports specified
+$ docker run -d -p 8081:8080 --name ex1thrteen ex1thrteen
