@@ -1,0 +1,12 @@
+# to run frontend
+# go to example-frontend folder & build image
+$ docker build -t frontnd .
+
+# run the container
+$ docker run -d -p 5000:5000 --name frntcontnr frotnd
+
+
+# to run backend
+# go to example-backend folder
+$ docker build -t bkend .
+$ docker run -d -p 8080:8080 --name bkendcontr bkend

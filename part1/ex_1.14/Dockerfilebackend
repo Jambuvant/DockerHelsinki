@@ -1,0 +1,21 @@
+from node:16
+
+# expose port
+expose 5000
+
+workdir /myfrontend
+
+copy . .
+run npm install 
+
+# add ENV for ex 1.14
+ENV REACT_APP_BACKEND_URL=http://localhost:8080/
+
+# build static files
+run npm run build
+
+# serving static files
+run npm install -g serve
+
+# start app on port 5000
+cmd ["serve","-s", "-l", "5000", "build"]
