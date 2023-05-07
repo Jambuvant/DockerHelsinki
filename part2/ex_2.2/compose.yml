@@ -1,0 +1,7 @@
+services:
+  simple-web:
+    image: devopsdockeruh/simple-web-service
+    volumes:
+        - ./log.txt:/usr/src/app/text.log
+    command: server
+    container_name: simple-serv
